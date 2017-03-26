@@ -17,6 +17,8 @@ namespace SwiftAPI.Models
         public decimal amount { get; set; }
         public string EndToEnd { get; set; }
         public string invoice { get; set; }
+        public Boolean validSchema { get; set; }
+        public List<transactionError> errorList { get; set; }
     }
 
     public class Debtor

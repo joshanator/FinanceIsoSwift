@@ -1,10 +1,7 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Web;
 
 namespace SwiftAPI.Models
 {
@@ -99,6 +96,33 @@ namespace SwiftAPI.Models
             }
 
             return error;
+        }
+
+        public static transactionError CheckNull(Transaction transaction)
+        {
+            transactionError t = new transactionError();
+            if(transaction.amount == 0) { t.message += "Amount, "; }
+            else if(transaction.creditor == null) { t.message += "creditor, "; }
+            else if (transaction.currency == null) { t.message += "currency, "; }
+            else if (transaction.dateTime == null) { t.message += "dateTime, "; }
+            else if (transaction.debtor == null) { t.message += "debitor, "; }
+            else if (transaction.EndToEnd == null) { t.message += "endtoend, "; }
+            else if (transaction.creditor.address == null) { t.message += "creditorAddress, "; }
+            else if (transaction.creditor.bankName == null) { t.message += "creditorBank, "; }
+            else if (transaction.creditor.country == null) { t.message += "creditorCountry, "; }
+            else if (transaction.creditor.IBAN == null) { t.message += "creditorIBAN, "; }
+            else if (transaction.creditor.name == null) { t.message += "creditorName, "; }
+            else if (transaction.debtor.name == null) { t.message += "debtorName, "; }
+            else if (transaction.debtor.bankName == null) { t.message += "debtorBank, "; }
+            else if (transaction.debtor.IBAN == null) { t.message += "debtorIBAN, "; }
+
+            if(t.message != null)
+            {
+                t.section = "NullValues";
+                t.message = "The sections: " + t.message + " are NULL";
+            }
+
+            return t;
         }
 
     }

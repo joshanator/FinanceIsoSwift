@@ -1,21 +1,26 @@
 
 <?php
-$uploads_dir = '/uploads';
-foreach ($_FILES["input"]["error"] as $key => $error) {
-    if ($error == UPLOAD_ERR_OK) {
-        $tmp_name = $_FILES["input"]["tmp_name"][$key];
-        // basename() may prevent filesystem traversal attacks;
-        // further validation/sanitation of the filename may be appropriate
-        $name = basename($_FILES["input"]["name"][$key]);
-        move_uploaded_file($tmp_name, "$uploads_dir/$name");
+
+$total = count($_FILES['input']['name']);
+
+// Loop through each file
+for($i=0; $i<$total; $i++) {
+  //Get the temp file path
+  $tmpFilePath = $_FILES['input']['tmp_name'][$i];
+
+  //Make sure we have a filepath
+  if ($tmpFilePath != ""){
+    //Setup our new file path
+    $newFilePath = "./uploads/" . $_FILES['input']['name'][$i];
+
+    //Upload the file into the temp dir
+    if(move_uploaded_file($tmpFilePath, $newFilePath)) {
+
+      //Handle other code here
+
     }
+  }
 }
-
-$response = file_get_contents('http://swiftapi.azurewebsites.net/api/validate/?xml=pain.001.001.08');
-
-$response = json_decode($response);
-console.log($response);
-
 
 echo json_encode([0]};
 ?> 

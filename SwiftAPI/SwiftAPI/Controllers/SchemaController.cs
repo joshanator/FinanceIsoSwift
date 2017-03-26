@@ -23,7 +23,7 @@ namespace SwiftAPI.Controllers
 
             bool hasErrors = false;
             XmlSchemaSet schemas = new XmlSchemaSet();
-            schemas.Add( null, xsd);
+            schemas.Add(null, xsd);
 
             XDocument doc1 = XDocument.Load(xml);
 
@@ -42,7 +42,5 @@ namespace SwiftAPI.Controllers
 
             return true;
         }
-
-
     }
 }
