@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+
+  Simple XML that represent a computer.
+  The tag keyboard, mouse and monitor 
+  could be anything
+   
+-->
+<computer>
+  <keyboard>105 keys</keyboard>
+  <mouse>3 button</mouse>
+  <monitor>vga</monitor>
+</computer>
