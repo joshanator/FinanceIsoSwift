@@ -1,35 +1,21 @@
+
 <?php
-$target_dir = "uploads/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$FileType = pathinfo($target_file,PATHINFO_EXTENSION);
-if(isset($_POST["submit"])) {
-    
-}
-// Check if file already exists
-if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
-    $uploadOk = 0;
-}
-// Check file size
-if ($_FILES["fileToUpload"]["size"] > 500000) {
-    echo "Sorry, your file is too large.";
-    $uploadOk = 0;
-}
-// Allow certain file formats
-if($FileType != "xml" && $FileType != "xsd") {
-    echo "Sorry, only xml, xsd files";
-    $uploadOk = 0;
-}
-// Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
-// if everything is ok, try to upload file
-} else {
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-    } else {
-        echo "There was an error uploading your file.";
+$uploads_dir = '/uploads';
+foreach ($_FILES["input"]["error"] as $key => $error) {
+    if ($error == UPLOAD_ERR_OK) {
+        $tmp_name = $_FILES["input"]["tmp_name"][$key];
+        // basename() may prevent filesystem traversal attacks;
+        // further validation/sanitation of the filename may be appropriate
+        $name = basename($_FILES["input"]["name"][$key]);
+        move_uploaded_file($tmp_name, "$uploads_dir/$name");
     }
 }
-?>
+
+$response = file_get_contents('http://swiftapi.azurewebsites.net/api/validate/?xml=pain.001.001.08');
+
+$response = json_decode($response);
+console.log($response);
+
+
+echo json_encode([0]};
+?> 

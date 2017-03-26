@@ -1,4 +1,3 @@
-C:\Users\Joshua Peterson\Documents\GitHub\FinanceIsoSwift\SwiftAPI\SwiftAPI\obj\Debug\SwiftAPI.csprojResolveAssemblyReference.cache
 C:\Users\Joshua Peterson\Documents\GitHub\FinanceIsoSwift\SwiftAPI\SwiftAPI\bin\ApplicationInsights.config
 C:\Users\Joshua Peterson\Documents\GitHub\FinanceIsoSwift\SwiftAPI\SwiftAPI\bin\roslyn\csc.exe
 C:\Users\Joshua Peterson\Documents\GitHub\FinanceIsoSwift\SwiftAPI\SwiftAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -63,5 +62,6 @@ C:\Users\Joshua Peterson\Documents\GitHub\FinanceIsoSwift\SwiftAPI\SwiftAPI\bin\
 C:\Users\Joshua Peterson\Documents\GitHub\FinanceIsoSwift\SwiftAPI\SwiftAPI\bin\EntityFramework.SqlServer.xml
 C:\Users\Joshua Peterson\Documents\GitHub\FinanceIsoSwift\SwiftAPI\SwiftAPI\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Joshua Peterson\Documents\GitHub\FinanceIsoSwift\SwiftAPI\SwiftAPI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Joshua Peterson\Documents\GitHub\FinanceIsoSwift\SwiftAPI\SwiftAPI\obj\Debug\SwiftAPI.csprojResolveAssemblyReference.cache
 C:\Users\Joshua Peterson\Documents\GitHub\FinanceIsoSwift\SwiftAPI\SwiftAPI\obj\Debug\SwiftAPI.dll
 C:\Users\Joshua Peterson\Documents\GitHub\FinanceIsoSwift\SwiftAPI\SwiftAPI\obj\Debug\SwiftAPI.pdb

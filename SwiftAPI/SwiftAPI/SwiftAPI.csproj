@@ -250,6 +250,7 @@
     <None Include="Misc\currencyCodes.csv" />
     <Content Include="Misc\currencyCodes.json" />
     <None Include="Project_Readme.html" />
+    <None Include="Properties\PublishProfiles\SwiftAPI - Web Deploy.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
