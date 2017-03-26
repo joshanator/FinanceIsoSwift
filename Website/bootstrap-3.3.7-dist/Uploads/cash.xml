@@ -1,0 +1,15 @@
+<Doc:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Doc="urn:swift:xsd:swift.cashrepv1$camt.003.001.03">
+	<Doc:camt.003.001.03>
+		<Doc:MsgId>
+			<Doc:Id>ABCDEFGHIJKLMNOPQRST123456789012345</Doc:Id>
+			<Doc:QryTp>ALLL</Doc:QryTp>		
+		</Doc:MsgId>
+		<Doc:AcctQryDef>
+			<Doc:QryTp>ALLL</Doc:QryTp>
+			<Doc:QryT2>ALLL</Doc:QryT2>
+			<Doc:AcctCrit>
+				<Doc:QryNm>BE88320034713441</Doc:QryNm>
+			</Doc:AcctCrit>
+		</Doc:AcctQryDef>
+	</Doc:camt.003.001.03>
+</Doc:Document>
