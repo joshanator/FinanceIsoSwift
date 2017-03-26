@@ -12,7 +12,7 @@ using System.Xml.Schema;
 
 namespace SwiftAPI.Controllers
 {
-    public class VSchemaController : ApiController
+    public class SchemaController : ApiController
     {
         public Boolean Get(string xml, string xsd)
         {
